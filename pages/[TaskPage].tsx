@@ -12,12 +12,10 @@ export default function TaskPage() {
   const router = useRouter();
   const taskList = useAppSelector((state) => state.tasks.task_list);
   const selected = useAppSelector((state) => state.screens);
+  const name = router.query.TaskPage!.toString();
   return (
     <div className="flex h-screen w-screen">
-      <SideBar
-        user={router.query.TaskPage!.toString()}
-        className="bg-stone-900 w-1/5 pr-5"
-      />
+      <SideBar user={name} className="bg-stone-900 w-1/5 pr-5" />
       <div className="w-4/5 flex justify-stretch m-16">
         {selected.name === "home" && <Empty />}
         {selected.name === "create" && <CreateForm />}
