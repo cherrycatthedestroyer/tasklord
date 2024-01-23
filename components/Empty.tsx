@@ -1,5 +1,6 @@
 import { useAppDispatch } from "../store/hooks";
 import { SET_SCREEN } from "@/store/screens";
+import Image from "next/image";
 
 const Empty: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -9,9 +10,9 @@ const Empty: React.FC = () => {
   }
   return (
     <div className="m-auto text-center flex flex-col justify-center">
-      <img
+      <Image
         src="/no-projects.png"
-        alt="no-file"
+        alt="paper and pen"
         className="h-24 w-24 self-center mr-7"
       />
       <h1 className="my-4 text-stone-600 text-2xl font-bold">

@@ -23,7 +23,7 @@ const SideBar: React.FC<DivProps> = ({ user, ...props }) => {
   return (
     <div {...props}>
       <h2 className="tracking-wide ml-8 mb-8 mt-16 text-xl text-white font-semibold">
-        {user.toUpperCase()}'S TASKS
+        {user.toUpperCase()}&apos;S TASKS
       </h2>
       <button
         onClick={() => changeTab("create")}
