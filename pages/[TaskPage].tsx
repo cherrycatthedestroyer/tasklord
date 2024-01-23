@@ -5,6 +5,7 @@ import Task from "@/components/Task";
 
 import React from "react";
 import { useAppSelector } from "../store/hooks";
+import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
@@ -12,7 +13,12 @@ export default function TaskPage() {
   const router = useRouter();
   const taskList = useAppSelector((state) => state.tasks.task_list);
   const selected = useAppSelector((state) => state.screens);
-  const name = router.query.TaskPage!.toString();
+  const [name, setName] = useState<string>("someone");
+
+  useEffect(() => {
+    setName(router.query.TaskPage!.toString());
+  }, [router.query.TaskPage]);
+
   return (
     <div className="flex h-screen w-screen">
       <SideBar user={name} className="bg-stone-900 w-1/5 pr-5" />

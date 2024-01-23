@@ -14,6 +14,8 @@ const Empty: React.FC = () => {
         src="/no-projects.png"
         alt="paper and pen"
         className="h-24 w-24 self-center mr-7"
+        width={100}
+        height={100}
       />
       <h1 className="my-4 text-stone-600 text-2xl font-bold">
         No Task Selected
