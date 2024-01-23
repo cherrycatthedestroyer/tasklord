@@ -47,4 +47,5 @@ const SideBar: React.FC<DivProps> = ({ user, ...props }) => {
   );
 };
 
+SideBar.displayName = "SideBar";
 export default SideBar;

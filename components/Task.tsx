@@ -75,4 +75,5 @@ const Task: React.FC<{ taskId: number }> = ({ taskId }) => {
   );
 };
 
+Task.displayName = "Task";
 export default Task;

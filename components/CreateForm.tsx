@@ -71,4 +71,5 @@ const CreateForm: React.FC = () => {
   );
 };
 
+CreateForm.displayName = "CreateForm";
 export default CreateForm;
