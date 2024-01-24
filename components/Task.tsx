@@ -32,8 +32,8 @@ const Task: React.FC<{ taskId: number }> = ({ taskId }) => {
   }
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between">
+    <div className="flex flex-col w-full">
+      <div className="flex justify-between shrink">
         <h2 className="mb-4 text-5xl font-bold mr-16">
           {taskList[taskId].title}
         </h2>
@@ -48,18 +48,20 @@ const Task: React.FC<{ taskId: number }> = ({ taskId }) => {
       <p className="my-6">{taskList[taskId].description}</p>
       <hr />
       <h2 className="mt-6 mb-4 text-3xl font-bold">Tasks</h2>
-      <input ref={subTaskInput} type="text" className={inputStyle} />
-      <button
-        onClick={addSubTask}
-        className="border-2 border-white hover:border-stone-600 py-2 px-4 mb-5 rounded"
-      >
-        Add Task
-      </button>
+      <div>
+        <input ref={subTaskInput} type="text" className={inputStyle} />
+        <button
+          onClick={addSubTask}
+          className="border-2 border-white hover:border-stone-600 py-2 px-4 mb-5 rounded"
+        >
+          Add Task
+        </button>
+      </div>
       <ul>
         {taskList[taskId].sub_tasks.map((task, index) => (
           <li
             key={index}
-            className="flex justify-between items-center my-5 px-4 py-6 w-full bg-zinc-300 rounded"
+            className="flex justify-between items-center my-5 px-4 py-6 min-w-5 bg-zinc-300 rounded"
           >
             <p className="font-medium">{task}</p>
             <button

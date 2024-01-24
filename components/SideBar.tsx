@@ -29,7 +29,7 @@ const SideBar: React.FC<DivProps> = ({ user, ...props }) => {
         onClick={() => changeTab("create")}
         className="ml-8 mb-8 bg-stone-700 hover:bg-stone-600 text-white py-2 px-3 rounded"
       >
-        + Add Project
+        + Add Task
       </button>
       <ul>
         {taskList.map((task, index) => (

@@ -21,7 +21,7 @@ export default function TaskPage() {
 
   return (
     <div className="flex h-screen w-screen">
-      <SideBar user={name} className="bg-stone-900 w-1/5 pr-5" />
+      <SideBar user={name} className="bg-stone-900 w-1/5 pr-5 min-w-48" />
       <div className="w-4/5 flex justify-stretch m-16">
         {selected.name === "home" && <Empty />}
         {selected.name === "create" && <CreateForm />}
